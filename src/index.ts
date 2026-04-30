@@ -1,2 +1,8 @@
-console.log("Hello, World!");
-console.log("hey");
+import "dotenv/config";
+import app from "./app";
+
+const PORT = Number(process.env.PORT);
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
